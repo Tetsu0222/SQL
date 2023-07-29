@@ -18,8 +18,6 @@ HAVING AVG( sal ) < ( SELECT AVG( sal ) FROM emp );
 →全社員の平均給与より、平均給与が低い部署を抽出
 
 
-//複数行の1つの列の値を戻す。
-SELECT deptnoF
-FROM emp
-where job = 'salesman';
+
+
 

@@ -21,3 +21,11 @@ SELECT ename , sal
 FROM emp
 WHERE sal > ANY( SELECT sak FROM emp WHERE job = 'ASSISTANT' );
 →職種がアシスタントである複数社員の給与のいずれかよりも多い給与をもらっている社員を求める。
+
+
+//ALL句
+SELECT ename , sal 
+FROM emp
+WHERE sal > ALL ( SELECT sal FROM emp WHERE job = 'ASSISTANT' );
+
+→職種がアシスタントである複数社員におけるすべての給与よりも多い給与をもらっている社員を求める。

@@ -29,3 +29,9 @@ FROM emp
 WHERE sal > ALL ( SELECT sal FROM emp WHERE job = 'ASSISTANT' );
 
 →職種がアシスタントである複数社員におけるすべての給与よりも多い給与をもらっている社員を求める。
+
+
+//相関サブクエリ
+SELECT ename , sal
+FROM emp1 e
+WHERE sal < ( SELECT MAX( sal ) FROM sal_hist s WHERE s.ename = e.empno );

@@ -10,3 +10,14 @@ VALUES( 1 , 'AAA' );
 (構文)
 INSERT INTO <表名> ( <列名>... )
 VALUES( <値>... );
+
+
+//UPDATE
+UPDATE emp2
+SET sal = 1000
+where empno = 1001;
+
+(構文)
+UPDATE <表名>
+SET <列名> = <値>
+[where <条件式>]

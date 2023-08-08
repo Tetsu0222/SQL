@@ -21,3 +21,12 @@ where empno = 1001;
 UPDATE <表名>
 SET <列名> = <値>
 [where <条件式>]
+
+
+//DELETE
+DELETE emp5
+where empno = 1006;
+
+(構文)
+DELETE <表名>
+[where 条件式];

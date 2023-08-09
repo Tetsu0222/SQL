@@ -11,6 +11,13 @@ VALUES( 1 , 'AAA' );
 INSERT INTO <表名> ( <列名>... )
 VALUES( <値>... );
 
+(スカラーサブクエリの使用)
+INSERT INTO emp6(empno,ename,sal)
+VALUES( 1009 , 'Joe' , ( SELECT sal FROM emp6 WHERE empno = 1001 ));
+
+→追加するレコードの給与は、社員番号1001と同じに設定する。
+
+
 
 //UPDATE
 UPDATE emp2

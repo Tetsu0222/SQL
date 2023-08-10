@@ -29,6 +29,13 @@ UPDATE <表名>
 SET <列名> = <値>
 [where <条件式>]
 
+(UPDATEのスカラーサブクエリ)
+UPDATE emp7
+SET sal = ( SELECT sal FROM emp7 WHERE empno = 1001 )
+WHERE empno = 1006;
+
+→社員番号1006の給与を社員番号1001の給与と同額に変更
+
 
 //DELETE
 DELETE emp5

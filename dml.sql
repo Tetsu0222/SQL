@@ -44,3 +44,7 @@ where empno = 1006;
 (構文)
 DELETE <表名>
 [where 条件式];
+
+(whereでのサブクエリ)
+DELETE emp8
+where sal < ( SELECT sal from emp8 where emono = 1001 );

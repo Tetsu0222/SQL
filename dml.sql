@@ -36,6 +36,10 @@ WHERE empno = 1006;
 
 →社員番号1006の給与を社員番号1001の給与と同額に変更
 
+(UPDATEの非スカラー副問い合わせ)
+UPDATE emp9
+set ( sal , comm_pct ) = ( select sal , comm_pct from emp9 where empno = 1001 );
+
 
 //DELETE
 DELETE emp5

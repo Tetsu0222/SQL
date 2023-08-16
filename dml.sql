@@ -41,6 +41,11 @@ UPDATE emp9
 set ( sal , comm_pct ) = ( select sal , comm_pct from emp9 where empno = 1001 );
 
 
+(相関サブクエリの使用)
+update emp1 e
+set sal = ( select new_sal from new_sal_emp s where s.emono = e.empno );
+
+
 //DELETE
 DELETE emp5
 where empno = 1006;

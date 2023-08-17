@@ -57,3 +57,7 @@ DELETE <表名>
 (whereでのサブクエリ)
 DELETE emp8
 where sal < ( SELECT sal from emp8 where emono = 1001 );
+
+(相関サブクエリで削除)
+delete emp2 e
+where exisits( select 'x' from retired_emp r where r.empno = e.empno );
